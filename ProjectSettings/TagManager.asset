@@ -32,10 +32,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CameraIgnore
   - Water
   - UI
-  - 
+  - Interactable
   - 
   - 
   - 
