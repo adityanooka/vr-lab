@@ -451,10 +451,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSpawner
   objectToSpawn: {fileID: 7543482301158427556, guid: e9b82ef592397114f815a99e1dbd8389, type: 3}
-  numberOfObjects: 50
-  radius: 20
+  numberOfObjects: 150
+  radius: 50
   minHeight: 1
-  maxHeight: 5
+  maxHeight: 20
 --- !u!114 &760371027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSpawner
   objectToSpawn: {fileID: 755707335}
-  numberOfObjects: 10
+  numberOfObjects: 15
   radius: 20
   minHeight: 1
   maxHeight: 5
