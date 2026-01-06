@@ -7,8 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water_Volume
-  m_Shader: {fileID: 4800000, guid: 25c03bde9e6e4884a9fedcc633b5da0f, type: 3}
+  m_Name: DistortionMat
+  m_Shader: {fileID: -6465566751694194690, guid: 300688175bd7cb84fafd5fd45c942ace,
+    type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,26 +24,25 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _MainTex:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - density: 1
-    - densityOffset: 0
-    - godRayStrength: 1
-    - jitter: 0.1
-    - lightScattering: 1
-    - minDarkness: 0
-    - scale: 1
-    - shadows: 0
-    - speed: 0.2
-    - stepSize: 1
-    - steps: 1
+    - _Distortion: 0.0312
+    - _DistortionBlendDistance: 0.5
+    - _Distortion_Scale: 5
+    - _World_Water_Level: 0
     m_Colors:
-    - Albedo: {r: 0.056247775, g: 0.1509434, b: 0.15094337, a: 1}
-    - bounds: {r: 10000, g: 500, b: 10000, a: 0}
-    - pos: {r: 0, g: -245.04, b: 0, a: 0}
+    - _Speeds: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _UnderwaterTint: {r: 0.07208972, g: 0.1455878, b: 0.33962262, a: 0}
   m_BuildTextureStacks: []
-  m_AllowLocking: 1
