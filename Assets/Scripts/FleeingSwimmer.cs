@@ -6,7 +6,7 @@ public class FleeingSwimmer : NetworkBehaviour
 {
     public float swimSpeed = 1f;
     public float fleeSpeed = 3f;
-    public float fleeDistance = 3f;
+    public float fleeDistance = 1f;
     private Vector3 currentTarget;
     private float nextChangeTime;
 
@@ -58,7 +58,7 @@ public class FleeingSwimmer : NetworkBehaviour
     void ChangeRandomDirection()
     {
         // Set a new random target in the immediate vicinity
-        Vector3 randomOffset = new Vector3(Random.Range(-5f, 5f), Random.Range(1f, 5f), Random.Range(-5f, 5f));
+        Vector3 randomOffset = new Vector3(Random.Range(-5f, 5f), Random.Range(-2f, 2f), Random.Range(-5f, 5f));
         currentTarget = transform.position + randomOffset;
         nextChangeTime = Time.time + Random.Range(3f, 7f);
     }
