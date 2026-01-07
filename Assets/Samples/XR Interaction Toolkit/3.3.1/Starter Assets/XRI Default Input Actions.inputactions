@@ -1,5 +1,4 @@
 {
-    "version": 1,
     "name": "XRI Default Input Actions",
     "maps": [
         {
@@ -1295,9 +1294,9 @@
             "actions": [
                 {
                     "name": "Teleport Mode",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "a21db72c-4843-4839-b4d0-3ce8d287cb86",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -1354,17 +1353,6 @@
                     "id": "8da6ed3a-f621-49fe-8c76-1f6b7d7754d6",
                     "path": "<XRController>{LeftHand}/{Primary2DAxis}",
                     "interactions": "Sector(directions=1)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Teleport Mode",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "70a2336b-dc36-4581-8cfe-d5a230131fd5",
-                    "path": "<XRController>{RightHand}/gripPressed",
-                    "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Teleport Mode",
