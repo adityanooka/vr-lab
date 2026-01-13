@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "TeleportAction",
+    "maps": [
+        {
+            "name": "Navigation",
+            "id": "d087c3f9-99d9-408e-a9a6-263bf33e0b77",
+            "actions": [
+                {
+                    "name": "Teleport",
+                    "type": "Value",
+                    "id": "fb86400b-bd03-4b46-952a-094dbd9b5f1b",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "19fa19a1-47ac-4061-b647-ffe85da51528",
+                    "path": "<XRController>{RightHand}/{Trigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Teleport",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

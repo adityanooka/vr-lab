@@ -1618,6 +1618,7 @@ GameObject:
   - component: {fileID: 471419052}
   - component: {fileID: 471419051}
   - component: {fileID: 471419050}
+  - component: {fileID: 471419053}
   m_Layer: 0
   m_Name: XR Origin (VR)
   m_TagString: Untagged
@@ -1715,6 +1716,33 @@ MonoBehaviour:
   m_BodyPositionEvaluatorObject: {fileID: 0}
   m_ConstrainedBodyManipulatorObject: {fileID: 0}
   m_UseCharacterControllerIfExists: 1
+--- !u!114 &471419053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471419046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aebd10899eac6d4fb691f7aee45c332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRLabClass.Teleport.AnchoredTeleportNavigation
+  TeleportAction: {fileID: 0}
+  rayLength: 10
+  rayActivationThreshold: 0
+  setTargetThreshold: 0
+  anchorLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  TeleportRay: {fileID: 0}
+  TeleportVisuals: {fileID: 0}
+  TeleportAnchor: {fileID: 0}
+  TeleportTarget: {fileID: 0}
+  PreviewAvatar: {fileID: 7216047633976425198, guid: eabe75e140b7ab544827c9b2e1428157, type: 3}
 --- !u!1001 &714896326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4350,9 +4378,9 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1475411198}
   - {fileID: 471419047}
   - {fileID: 1719725074}
+  - {fileID: 1475411198}
   - {fileID: 1000840207}
   - {fileID: 832575519}
   - {fileID: 15858377}
