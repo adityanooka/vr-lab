@@ -194,7 +194,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8441393518387378429, guid: 69a719a023b7d85459c359e0d659ce0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1599893536}
   m_SourcePrefab: {fileID: 100100000, guid: 69a719a023b7d85459c359e0d659ce0a, type: 3}
 --- !u!1 &15858376
 GameObject:
@@ -7363,6 +7366,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6157843572064958879, guid: 9fbcf3cd2dca1534980b7c916db73069, type: 3}
   m_PrefabInstance: {fileID: 6120899851876639963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1599893532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8441393518387378429, guid: 69a719a023b7d85459c359e0d659ce0a, type: 3}
+  m_PrefabInstance: {fileID: 10978617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1599893536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599893532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f69dc1cb084aa42b2f2f8cd87bc770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationProvider
+  m_Mediator: {fileID: 0}
+  m_TransformationPriority: 0
+  m_DelayTime: 0
 --- !u!4 &1667287382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8614542997819742977, guid: 9fbcf3cd2dca1534980b7c916db73069, type: 3}
