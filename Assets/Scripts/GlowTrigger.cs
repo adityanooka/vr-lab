@@ -9,7 +9,9 @@ public class GlowTrigger : MonoBehaviour
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        // SEARCH INSIDE CHILDREN instead of just the root
+        rend = GetComponentInChildren<Renderer>();
+
         if (rend != null)
         {
             targetMat = rend.material;
@@ -17,7 +19,10 @@ public class GlowTrigger : MonoBehaviour
             if (targetMat.HasProperty("_EmissionColor"))
                 originalColor = targetMat.GetColor("_EmissionColor");
         }
-        else { Debug.LogError("GlowTrigger: No Renderer found on " + gameObject.name); }
+        else
+        {
+            Debug.LogError("GlowTrigger: Still no Renderer found! Check if the Trap has a mesh inside it.");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
