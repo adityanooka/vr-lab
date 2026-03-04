@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Samples/VRSYS Core/1.0.5/Sample Scene Setups/Scenes/Single-Scene
       Setup/VRSYS-SingleScene.unity
     guid: b696740ea170a5840baa71d36430d7a2
+  - enabled: 1
+    path: Assets/VR Lab Class/Scene/VR-LabClass-DemoScene.unity
+    guid: cf41b318c090151428556064c5871c6a
+  - enabled: 1
+    path: Assets/Scenes/updatedsceneforreview3.unity
+    guid: acdf861682e2091468e45dc0cbce7234
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 62f258695acb9c545b810e185b5efbd8, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
