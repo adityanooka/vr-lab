@@ -1,4 +1,4 @@
-    using UnityEngine;
+using UnityEngine;
 using Unity.Netcode.Components;
 
 public class OrbitMotion : MonoBehaviour
@@ -41,4 +41,3 @@ public class OrbitMotion : MonoBehaviour
         }
     }
 }
-

@@ -41,7 +41,12 @@ namespace VRLabClass.Milestone2
         public void ActivateAnchorVisuals() => _anchorVisuals.SetActive(true);
 
         // Update anchor position (Aiming state)
-        public void UpdateAnchorTransform(Vector3 hitPoint) => _anchorTransform.position = hitPoint;
+        public void UpdateAnchorTransform(Vector3 hitPoint)
+        {
+            _anchorTransform.position = hitPoint;
+            Vector3 rot = _anchorTransform.eulerAngles;
+            _anchorTransform.rotation = Quaternion.Euler(0f, rot.y, 0f);
+        }
 
         // Activating preview avatar and distance indicator (Locked state)
         public void ActivatePreviewAvatarVisuals()
@@ -56,8 +61,11 @@ namespace VRLabClass.Milestone2
             
             // adjust avatar rotation
             Vector3 forwardLookDirection = _anchorTransform.position - _previewAvatarTransform.position;
-            _previewAvatarTransform.rotation = Quaternion.LookRotation(forwardLookDirection, Vector3.up);
-            
+            forwardLookDirection.y = 0; // only look in x-z-plane
+            if (forwardLookDirection.sqrMagnitude > 0.001f) // check if look direction is valid
+            {
+                _previewAvatarTransform.rotation = Quaternion.LookRotation(forwardLookDirection, Vector3.up);
+            }
             // adjust avatar height in local coordinates
             Vector3 localPos = _previewAvatarTransform.localPosition;
             localPos.y = userHeight;
@@ -75,10 +83,12 @@ namespace VRLabClass.Milestone2
             Vector3 avatarPos = _previewAvatarTransform.position;
             avatarPos.y = 0;
 
-            // adjust distance indicator scale along x- and z-axis
+            /// adjust distance indicator scale along x- and z-axis
             float scale = 2 * Vector3.Distance(anchorPos, avatarPos);
-            _distanceIndicatorTransform.localScale =
-                new Vector3(scale, _distanceIndicatorTransform.localScale.y, scale);
+            // apply scale on X and Z, keep Y at 1 (or adjust as needed)
+            _distanceIndicatorTransform.localScale = new Vector3(scale, 1f, scale);
+            // set rotation separately (rotation is a Quaternion; localEulerAngles is a Vector3)
+            _distanceIndicatorTransform.localEulerAngles = new Vector3(0f, 90f, 0f);
         }
 
         // Deactivating all visuals (Idle state)
