@@ -41,6 +41,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.XR.Interaction.Toolkit;
 using VRSYS.Core.Logging;
 
 namespace VRSYS.Core.Networking
@@ -82,8 +83,9 @@ namespace VRSYS.Core.Networking
                     ExtendedLogger.LogError(GetType().Name, "no user prefab found for user role " + spawnInfo.userRole.Name);
                     return;
                 }
+                
 
-                if(verbose)
+                if (verbose)
                     ExtendedLogger.LogInfo(GetType().Name, "spawning " + spawnInfo.userName + " " + spawnInfo.userRole.Name);
 
                 SpawnUserPrefabServerRPC(prefabIndex);
